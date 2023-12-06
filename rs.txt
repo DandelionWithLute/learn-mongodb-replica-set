@@ -1,0 +1,11 @@
+start mongod -replSet rs --logpath \Programming\MongoDB\ReplicaSet\rs1\1.log --dbpath \Programming\MongoDB\ReplicaSet\rs1 --port 2701
+start mongod -replSet rs --logpath \Programming\MongoDB\ReplicaSet\rs2\2.log --dbpath \Programming\MongoDB\ReplicaSet\rs2 --port 2702
+start mongod -replSet rs --logpath \Programming\MongoDB\ReplicaSet\rs3\3.log --dbpath \Programming\MongoDB\ReplicaSet\rs3 --port 2703
+
+config={_id:"rs",members:[{_id:0,host:"localhost:2701"},{_id:1,host:"localhost:2702"},{_id:2,host:"localhost:2703"}]}
+rs.initiate(config)
+
+mongodb://localhost:2701,localhost:2702,localhost:2703/?authMechanism=DEFAULT&authSource=admin&replicaSet=rs
+
+MongoDB Replication with 3 Instances | Step-by-Step Guide | Connection with MongoDB compass
+https://www.youtube.com/watch?v=cbepHvXKPto
