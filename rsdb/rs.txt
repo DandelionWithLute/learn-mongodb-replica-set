@@ -1,0 +1,15 @@
+mongod --replSet "rsa" --port 27017 --dbpath "D:\Programming\MongoDB\data" --logpath "D:\Programming\MongoDB\log\mongod.log"
+
+mongod --replSet "rsa" --port 2717 --dbpath "D:\Programming\MongoDB\rsdb\rs1\data\" --logpath "D:\Programming\MongoDB\rsdb\rs1\mongod.log"
+mongod --replSet "rsa" --port 2727 --dbpath "D:\Programming\MongoDB\rsdb\rs2\data\" --logpath "D:\Programming\MongoDB\rsdb\rs2\mongod.log"
+
+
+
+rs.initiate( {
+   _id : "rsalpha",
+   members: [
+      { _id: 0, host: "mongodb0.example.net:2701" },
+      { _id: 1, host: "mongodb1.example.net:2702" },
+      { _id: 2, host: "mongodb2.example.net:2703" }
+   ]
+})
