@@ -13,3 +13,6 @@ https://youtu.be/gChzfhVGqp8?si=rS64fLFVVoJlfDDk
 see rs.txt
 MongoDB Replication with 3 Instances | Step-by-Step Guide | Connection with MongoDB compass
 https://www.youtube.com/watch?v=cbepHvXKPto
+
+Why you should never connect MongoDB to Prisma locally use Atlas in stead
+https://youtu.be/7N_cy5vDWyc?si=qaxmMDJeSNHPMP_t
